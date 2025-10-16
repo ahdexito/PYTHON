@@ -18,6 +18,9 @@ class Biblioteca:
 # 3. objeto 'Biblioteca' con atributo 'num_libros' iniciado a 100
 biblio1 = Biblioteca(100)
 
+# 3. imprimir el número de libros
+biblio1.ver_num_libros()
+
 # 4. agregar 50 libros
 biblio1.agregar_libros(50)
 

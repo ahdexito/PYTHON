@@ -26,7 +26,8 @@ class Alumno(Persona):
     # 2. método 'hablar' que pregunta una duda
     def hablar(self):
         print("Tengo una duda.")
-       
+ 
+ 
 # 4. función que llama al método 'hablar'       
 def hacer_hablar(Persona):
     Persona.hablar()
