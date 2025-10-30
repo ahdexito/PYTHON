@@ -22,7 +22,7 @@ class ReservaHotel:
     
     # método setter
     def set_precio(self, nuevo_precio):
-        if (nuevo_precio > self._precio_total):
+        if nuevo_precio > self._precio_total:
             self._precio_total = nuevo_precio
         
     # método de instancia
@@ -41,7 +41,7 @@ class ReservaHotel:
         
     # método que reduce el precio si coincide el código
     def aplicar_descuento(self, porcentaje, codigo):
-        if (codigo == self.__codigo_confirmacion):
+        if codigo == self.__codigo_confirmacion:
             self._precio_total -= self._precio_total * porcentaje
     
 
