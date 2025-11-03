@@ -42,7 +42,7 @@ class ReservaHotel:
     # método que reduce el precio si coincide el código
     def aplicar_descuento(self, porcentaje, codigo):
         if codigo == self.__codigo_confirmacion:
-            self._precio_total -= self._precio_total * porcentaje
+            self._precio_total -= self._precio_total * (porcentaje / 100)
     
 
 # Prueba de métodos
