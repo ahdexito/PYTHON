@@ -1,0 +1,3 @@
+Nombre: Ana
+Edad: 22
+Ciudad: Madrid

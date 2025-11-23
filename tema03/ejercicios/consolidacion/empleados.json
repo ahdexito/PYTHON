@@ -1,0 +1,32 @@
+[
+    {
+    "id": 1,
+    "nombre": "Marina",
+    "departamento": "Marketing",
+    "salario": 31000
+    },
+    {
+    "id": 2,
+    "nombre": "Antonio",
+    "departamento": "Limpieza",
+    "salario": 24100
+    },
+    {
+    "id": 3,
+    "nombre": "Sebastián",
+    "departamento": "Innovación",
+    "salario": 55350.50
+    },
+    {
+    "id": 4,
+    "nombre": "Victoria",
+    "departamento": "Recursos Humanos",
+    "salario": 27000
+    },
+    {
+    "id": 5,
+    "nombre": "Vicente",
+    "departamento": "Mantenimiento",
+    "salario": 35050.30
+    }
+]
