@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Port\u00e1til",
+        "categoria": "Electr\u00f3nica",
+        "precio": 750.0,
+        "stock": 15
+    },
+    {
+        "nombre": "Auriculares",
+        "categoria": "Electr\u00f3nica",
+        "precio": 35.0,
+        "stock": 50
+    },
+    {
+        "nombre": "Monitor",
+        "categoria": "Electr\u00f3nica",
+        "precio": 200.0,
+        "stock": 8
+    }
+]

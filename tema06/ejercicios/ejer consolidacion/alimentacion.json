@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Manzanas",
+        "categoria": "Alimentaci\u00f3n",
+        "precio": 2.5,
+        "stock": 100
+    },
+    {
+        "nombre": "Queso",
+        "categoria": "Alimentaci\u00f3n",
+        "precio": 5.0,
+        "stock": 25
+    },
+    {
+        "nombre": "Chocolate",
+        "categoria": "Alimentaci\u00f3n",
+        "precio": 3.0,
+        "stock": 5
+    }
+]

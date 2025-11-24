@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Aspiradora",
+        "categoria": "Hogar",
+        "precio": 120.0,
+        "stock": 12
+    },
+    {
+        "nombre": "Sof\u00e1",
+        "categoria": "Hogar",
+        "precio": 450.0,
+        "stock": 2
+    },
+    {
+        "nombre": "Lampara",
+        "categoria": "Hogar",
+        "precio": 45.0,
+        "stock": 20
+    }
+]
