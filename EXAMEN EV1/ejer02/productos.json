@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "Teclado", "categoria": "Hardware", "precio": 25.5},
+    {"id": 2, "nombre": "Ratón", "categoria": "Hardware", "precio": 15.0},
+    {"id": 3, "nombre": "Monitor", "categoria": "Hardware", "precio": 120.0},
+    {"id": 4, "nombre": "Silla", "categoria": "Mobiliario", "precio": 75.0},
+    {"id": 5, "nombre": "Mesa", "categoria": "Mobiliario", "precio": 150.0}
+]
