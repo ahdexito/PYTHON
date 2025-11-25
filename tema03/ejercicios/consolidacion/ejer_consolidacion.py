@@ -1,49 +1,68 @@
 import json
 import csv
 
-# leer json
+class Empleado:
+    def __init__(self, id, nombre, departamento, salario):
+        self.id = id
+        self.nombre = nombre
+        self.departamento = departamento
+        self.salario = float(salario)
+        
+    def to_dict(self):
+        return {"id":self.id,"nombre":self.nombre,"departamento":self.departamento,"salario":self.salario}
+
+    def __str__(self):
+        return f"* Id: {self.id}; Nombre: {self.nombre}; Departamento: {self.departamento}; Salario: {self.salario}"
+
+# leer y descargar json
 with open("empleados.json", "r", encoding="utf-8") as f:
-    empleados = json.load(f)
+    datos = json.load(f)
+
+# reconstruir empleados a objetos en una lista
+empleados = [
+    Empleado(d["id"], d["nombre"], d["departamento"], d["salario"])
+    for d in datos
+]
     
-# crear archivo csv
+# crear archivo csv y exportar datos
 with open("empleados.csv", "w", newline="", encoding="utf-8") as f:
-    escritor = csv.writer(f)
-    
+    writer = csv.writer(f) 
     # cabecera
-    escritor.writerow(["id", "nombre", "departamento", "salario"])
-    
+    writer.writerow(["id", "nombre", "departamento", "salario"])
     # datos
     for e in empleados:
-        escritor.writerow([
-            e["id"],
-            e["nombre"],
-            e["departamento"],
-            e["salario"]
+        writer.writerow([
+            e.id,
+            e.nombre,
+            e.departamento,
+            e.salario
         ])
+
+# lista para almacenar empleados filtrados
+empleados_filtrados = []
         
 # leer archivo csv
 with open("empleados.csv", "r", encoding="utf-8") as f:
-    lector = csv.reader(f)
-    next(lector)
+    reader = csv.reader(f)
+    next(reader)
     
-    media = 0
-    
-    print("EMPLEADOS CON SALARIO MAYOR A 30000")
-    for e_id, nombre, departamento, salario in lector:
+    # filtrar y guardar empleados por filtro
+    for e_id, nombre, departamento, salario in reader:
         salario = float(salario)
-        
-        # sumar salario en cada iteración
-        media += salario
-        
-        # imprimir si pasa el filtro
+        # guardar si pasa el filtro
         if salario > 30000:
-            print(f"Empleado/a: {nombre} | Salario: {salario:.2f}")
+            empleados_filtrados.append(Empleado(e_id, nombre, departamento, salario))
             
-    # imprimir media     
+    # imprimir empleados filtrados
+    print("EMPLEADOS CON SALARIO MAYOR A 30000")
+    for e in empleados_filtrados:
+        print(e)
+            
+    # calcular e imprimir media     
     print("\nSALARIO MEDIO DE LOS EMPLEADOS")
-    media /= 5
+    media = sum(e.salario for e in empleados) / len(empleados)
     print(f"Media: {media:.2f}")
     
-
+# crear archivo json y cargar con empleados filtrados
 with open("empleados_destacados.json", "w", encoding="utf-8") as f:
-    
+    json.dump([e.to_dict() for e in empleados_filtrados], f, indent=4)

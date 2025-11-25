@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nombre": "Marina",
+        "departamento": "Marketing",
+        "salario": 31000.0
+    },
+    {
+        "id": "3",
+        "nombre": "Sebasti\u00e1n",
+        "departamento": "Innovaci\u00f3n",
+        "salario": 55350.5
+    },
+    {
+        "id": "5",
+        "nombre": "Vicente",
+        "departamento": "Mantenimiento",
+        "salario": 35050.3
+    }
+]
