@@ -14,7 +14,7 @@ Código interno: EMP-00AB-1299
 texto = re.sub(r"\s+", " ", texto).strip()
 
 # extracciones con regex
-nombre = re.search(r"Nombre completo:\s([A-Za-zÁÉÍÓÚáéíóúñÑ ]+)", texto).group(1)
+nombre = re.search(r"Nombre completo:\s([A-Za-zÁÉÍÓÚáéíóúñÑ ]+) Email", texto).group(1)
 
 email = re.search(r"[a-zA-Z0-9._+%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", texto).group()
 

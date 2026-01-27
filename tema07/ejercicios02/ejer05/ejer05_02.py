@@ -7,7 +7,7 @@ correos = [
     "correo@dominio"
 ]
 
-patron = r"^[\w.-]+@[\w.-]+\.\w+$"
+patron = re.compile(r"^[\w.-]+@[\w.-]+\.[\w.-]+$") 
 
 print("Correos válidos:")
 for correo in correos:
