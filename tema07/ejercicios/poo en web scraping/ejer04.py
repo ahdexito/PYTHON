@@ -11,7 +11,7 @@ class Book:
     
     @titulo.setter
     def titulo(self, value):
-        if not value or not valor.strip():
+        if not value or not value.strip():
             raise ValueError("El título no puede estar vacío.")
         self._titulo = value
         
